@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itheima.dao.UserMapper">
+    <insert id="add">
+        insert into user(username,password,birthday) values (#{username},#{password},#{birthday})
+    </insert>
+    <update id="doEdit">
+        update user set username =#{username},password =#{password},birthday=#{birthday} where id=#{id}
+    </update>
+    <delete id="del">
+        delete from user where id = #{id}
+    </delete>
+
+
+    <select id="findAllUser" resultType="cn.itheima.pojo.User">
+        select * from user
+    </select>
+    <select id="edit" resultType="cn.itheima.pojo.User">
+        select * from user where id = #{id}
+    </select>
+</mapper>
