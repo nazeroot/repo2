@@ -1,5 +1,5 @@
 package cn.itheima.dao;
 
 public class TestMapper {
-    private String username;
+    private String username;private String sss;
 }
